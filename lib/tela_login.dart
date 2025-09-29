@@ -20,6 +20,7 @@ class telalogin extends StatelessWidget{
           children: [
             TextField(
               decoration: const InputDecoration(labelText: 'Usuário'),
+              controller: usuarioController,
             ),
             const SizedBox(height: 20),
             TextField(
