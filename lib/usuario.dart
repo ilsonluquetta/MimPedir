@@ -4,31 +4,32 @@ class Usuario{
   String? _login;
   String? _senha;
 
-  Usuario({String? nome, int? codigo, String? senha, String? login}){
-    _senha = senha;
+  // Construtor
+  Usuario({int? codigo, String? senha, String? login, String? nome}){
     _codigo = codigo;
+    _senha = senha;
+    _login = login;
     _nome = nome;
+  }
+  //Getters e Setters
+  // exemplo tradicional de getter
+  String? get login{
+    return _login;
+  }
+  // metodo estilo dart
+  int? get codigo => _codigo;
+  String? get nome => _nome;
+  String? get senha => _senha;
+
+  //setters
+  //setters tradicional
+  set login(String? login){
     _login = login;
   }
-
-  //getters
-  //escrita do get tradicional
-   String? get login{
-    return _login;
-   }
-   //escrita do get no estilo dart
-   String? get nome => _nome;
-   String? get senha => _senha;
-   int? get codigo => _codigo;
-
-   //setters
-  //escrita do set tradicional
-   set login(String? login){
-     _login = login;
-   }
-
-   //escrita do set no estilo dart
-   set nome(String? nome) => _nome = nome;
-   set senha(String? senha) => _senha = senha;
-   set codigo(int? codigo) => _codigo = codigo;
+  //Setters estilo dart
+  set nome(String? nome) => _nome = nome;
+  set codigo (int? codigo) => _codigo = codigo;
+  set senha(String? senha) => _senha = senha;
 }
+
+
